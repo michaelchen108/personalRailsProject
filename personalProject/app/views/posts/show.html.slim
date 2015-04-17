@@ -1,10 +1,21 @@
-= image_tag @post.image.url(:medium)
-h1 = @post.title
-p = @post.description
+#post_show.row
+  .col-md-8.col-md-offset-2
+    .panel.panel-default
+      .panel-heading.post_image
+        = image_tag @post.image.url(:medium)
+      .panel-body
+        h1 = @post.title
+        p = @post.description
+      .panel-footer
+        .row
+          .col-md-6
+            p 
+             | Submitted by 
+             = @post.user.name
+          .col-md-6
+            .btn-group.pull-right
+              - if user_signed_in?
+                = link_to "Back", root_path, class: "btn btn-default"
+                = link_to "Edit", edit_post_path, class: "btn btn-default"
+                = link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 
-p Submitted by 
-= @post.user.name
-
-= link_to "Back", root_path, class: "btn btn-default"
-= link_to "Edit", edit_post_path, class: "btn btn-default"
-= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
