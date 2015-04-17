@@ -14,8 +14,7 @@
              = @post.user.name
           .col-md-6
             .btn-group.pull-right
-              - if user_signed_in?
-                = link_to "Back", root_path, class: "btn btn-default"
-                = link_to "Edit", edit_post_path, class: "btn btn-default"
+              - if can? :crud, @post
+                = link_to "Edit", edit_post_path(@post), class: "btn btn-default"
                 = link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 
