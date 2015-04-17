@@ -1,7 +1,11 @@
-- @posts.each do |post|
-	.box.panel.panel-default
-		= link_to (image_tag post.image.url(:medium)), post
-		h2 = link_to post.title, post
-		p.user
-			Submitted by 
-			= post.user.name
+#posts.row
+	.col-md-8.col-md-offset-2
+		- @posts.each do |post|
+			.panel.panel-default
+				= link_to (image_tag post.image.url(:medium)), post
+				.panel-body
+					h2 = link_to post.title, post
+				.panel-footer
+					p.user
+						Submitted by 
+						= post.user.name
