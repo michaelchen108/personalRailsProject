@@ -14,8 +14,8 @@
  *= require_self
  */
 
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 body {
 	background: #E9E9E9;
@@ -38,7 +38,7 @@ nav {
 	}
 }
 
-#pins {
+#posts {
   margin: 0 auto;
   width: 100%;
   .box {
@@ -77,11 +77,11 @@ nav {
 	}
 }
 
-#pin_show {
+#posts_show {
 	.panel-heading {
 		padding: 0;
 	}
-	.pin_image {
+	.post_image {
 		img {
 			max-width: 100%;
 			width: 100%;
