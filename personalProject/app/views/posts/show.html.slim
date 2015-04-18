@@ -12,6 +12,9 @@
             p 
              | Submitted by 
              = @post.user.name
+             p 
+               | Tags: 
+               = raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
           .col-md-6
             .btn-group.pull-right
               - if can? :crud, @post

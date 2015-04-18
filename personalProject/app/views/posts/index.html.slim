@@ -4,8 +4,13 @@
 			.panel.panel-default
 				= link_to (image_tag post.image.url(:medium)), post
 				.panel-body
-					h2 = link_to post.title, post
+					h2 = link_to post.title, post 
 				.panel-footer
 					p.user
 						Submitted by 
 						= post.user.name
+					p 
+					  | Tags: 
+					  = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+
+

@@ -17,6 +17,9 @@
 class Post < ActiveRecord::Base
 	belongs_to :user
 
+	acts_as_taggable
+	acts_as_taggable_on :type
+
 	validates :title, presence: :true
 	validates :description, presence: :true
 	validates :user_id, presence: :true
