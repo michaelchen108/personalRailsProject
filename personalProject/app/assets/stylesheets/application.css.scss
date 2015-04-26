@@ -19,17 +19,12 @@
 
 body {
 	background: #E9E9E9;
-	padding:25px;
+	padding:75px;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
-
-.css1 { font-size: 1.0em; }
-.css2 { font-size: 1.2em; }
-.css3 { font-size: 1.4em; }
-.css4 { font-size: 1.6em; }
 
 nav {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
@@ -45,13 +40,28 @@ nav {
 }
 
 #posts {
-  margin: 0 auto;
-  width: 100%;
+  margin: 0;
+  width: 10;
+  .panel-heading {
+	  margin-bottom: 25;
+	  padding:25px;
+  }
+  .center-block { 
+  	display: block; 
+  	margin-left: auto; 
+  	margin-right: auto; 
+  	margin-top: auto; 
+  	margin-bottom: auto; 
+  }
+  .panel-body {
+	  padding: 35px;
+	  margin: 0;
+	  
+  }
   .box {
 	  margin: 100px;
 	  width: 100px;
 	  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
-	  border-radius: 10px;
 	  text-align: center;
 	  img {
 	  	max-width: 100%;
@@ -77,8 +87,8 @@ nav {
 	  .user {
 	  	font-size: 12px;
 	  	border-top: 1px solid #EAEAEA;
-			padding: 10px;
-			margin: 0;
+		padding: 10px;
+		margin: 0;
 	  }
 	}
 }
@@ -94,7 +104,7 @@ nav {
 
 #posts_show {
 	.panel-heading {
-		padding: 0;
+		padding: 10;
 	}
 	.post_image {
 		img {

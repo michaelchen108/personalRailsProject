@@ -1,16 +1,14 @@
 #posts.row
-	.col-md-8.col-md-offset-2
+	.col-md-6.col-md-offset-3
 		- @posts.each do |post|
 			.panel.panel-default
-				= link_to (image_tag post.image.url(:medium)), post
-				.panel-body
+				.panel-header.text-center
 					h2 = link_to post.title, post 
+					= link_to (image_tag post.image.url(:medium)), post
 				.panel-footer
-					p.user
-						Submitted by 
+					p
+						| Submitted by 
 						= post.user.name
 					p 
 					  | Tags: 
 					  = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
-
-
