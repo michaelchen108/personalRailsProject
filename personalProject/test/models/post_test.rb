@@ -12,6 +12,9 @@
 #  image_content_type :string(255)
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  latitude           :float
+#  longitude          :float
+#  location           :string(255)
 #
 
 require 'test_helper'
