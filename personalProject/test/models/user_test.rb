@@ -18,6 +18,8 @@
 #  name                   :string(255)
 #  admin                  :boolean
 #  address                :string(255)
+#  latitude               :float
+#  longitude              :float
 #
 
 require 'test_helper'

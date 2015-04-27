@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427092313) do
+ActiveRecord::Schema.define(version: 20150427233809) do
 
   create_table "posts", force: true do |t|
     t.string   "title"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150427092313) do
     t.datetime "image_updated_at"
     t.float    "latitude"
     t.float    "longitude"
-    t.string   "location"
+    t.string   "address"
   end
 
   create_table "taggings", force: true do |t|
@@ -64,6 +64,8 @@ ActiveRecord::Schema.define(version: 20150427092313) do
     t.string   "name"
     t.boolean  "admin"
     t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
