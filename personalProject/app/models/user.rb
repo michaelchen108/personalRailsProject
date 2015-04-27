@@ -17,6 +17,7 @@
 #  updated_at             :datetime
 #  name                   :string(255)
 #  admin                  :boolean
+#  address                :string(255)
 #
 
 class User < ActiveRecord::Base
