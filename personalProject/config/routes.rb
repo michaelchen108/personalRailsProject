@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :users
   resources :tag
   root "posts#index"
+
   
 end
