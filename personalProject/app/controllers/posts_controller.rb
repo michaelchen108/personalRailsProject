@@ -5,8 +5,12 @@ class PostsController < ApplicationController
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).order("created_at DESC")
     else
-      @posts = Post.all.order("created_at DESC")
-    end
+      if (current_user)
+        @posts = Post.near(current_user.address)
+      else
+        @posts = Post.all.order("created_at DESC")
+      end      
+    end         
   end
 
   def tag_cloud
@@ -43,16 +47,14 @@ class PostsController < ApplicationController
 
   def create 
     @post = current_user.posts.build(post_params)
+    @post.address = current_user.address
+    @post.geocode
     
     if @post.save
       redirect_to @post
     else
       render 'new'
     end
-  end
-
-  def location
-    current_user.address
   end
 
   private

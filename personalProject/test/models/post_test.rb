@@ -14,7 +14,7 @@
 #  image_updated_at   :datetime
 #  latitude           :float
 #  longitude          :float
-#  location           :string(255)
+#  address            :string(255)
 #
 
 require 'test_helper'
