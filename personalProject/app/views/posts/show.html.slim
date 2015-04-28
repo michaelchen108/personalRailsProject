@@ -11,10 +11,16 @@
           .col-md-6
             p 
              | Submitted by 
-             = @post.user.name
-             p 
-               | Tags: 
-               = raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+             - if (@post.user == current_user)
+              = "you"
+             - else
+              = @post.user.name 
+            p  
+              a href="mailto:#{@post.user.email}" 
+                = "Email #{@post.user.name}"
+            p 
+             | Tags: 
+             = raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
           .col-md-6
             .btn-group.pull-right
               - if can? :crud, @post
