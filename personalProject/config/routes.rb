@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+	
   get 'tags/:tag', to: 'posts#index', as: :tag
   devise_for :users
   resources :posts
@@ -6,5 +7,4 @@ Rails.application.routes.draw do
   resources :tag
   root "posts#index"
 
-  
 end
