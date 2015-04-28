@@ -2,15 +2,13 @@ class PostsController < ApplicationController
   load_and_authorize_resource 
   
   def index
-    if params[:tag]
-      @posts = Post.tagged_with(params[:tag]).order("created_at DESC")
+    if (current_user && params[:tag])
+      @posts = Post.near(current_user.address).tagged_with(params[:tag]).order("created_at DESC")
+    elsif (current_user)
+      @posts = Post.near(current_user.address).order("created_at DESC")
     else
-      if (current_user)
-        @posts = Post.near(current_user.address)
-      else
-        @posts = Post.all.order("created_at DESC")
-      end      
-    end         
+      @posts = Post.all.order("created_at DESC")
+    end            
   end
 
   def tag_cloud

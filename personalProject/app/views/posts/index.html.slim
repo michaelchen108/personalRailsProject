@@ -10,7 +10,10 @@
 				.panel-footer
 					p
 						| Submitted by 
-						= post.user.name
+						- if (post.user == current_user)
+							= "you"
+						- else
+							= post.user.name
 					p 
 					  | Tags: 
 					  = raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
