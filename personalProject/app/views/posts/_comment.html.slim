@@ -1,0 +1,6 @@
+= simple_form_for @comment, html: {multipart: true} do |f|
+  .form-group
+    = f.label :content
+	= f.text_field :content, { :placeholder => "Click here to comment" }
+    
+  = f.button :submit, class: "btn btn-primary"

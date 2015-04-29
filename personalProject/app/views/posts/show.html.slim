@@ -28,3 +28,28 @@
                 = link_to "Edit", edit_post_path(@post), class: "btn btn-default"
                 = link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 
+#posts.row
+  .col-md-6.col-md-offset-3
+    - @post.comments do |comment|
+      .panel.panel-default
+        .panel-body
+          p = simple_format(@post.description)
+        .panel-footer
+          p
+            | Submitted by 
+            - if (@post.user == current_user)
+              = "you"
+            - else
+              = @post.user.name
+
+.col-md-6.col-md-offset-3
+  .row
+    .panel.panel-default
+      .panel-heading
+        h5 Add A New Comment
+      .panel-body
+
+
+
+        = render 'form'
+
