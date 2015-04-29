@@ -31,6 +31,9 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  validates :name, presence: :true
+  validates :address, presence: :true
+
   geocoded_by :address   # can also be an IP address
   after_validation :geocode          # auto-fetch coordinates
 
