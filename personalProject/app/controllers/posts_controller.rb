@@ -6,6 +6,8 @@ class PostsController < ApplicationController
       @posts = Post.near(current_user.address).tagged_with(params[:tag]).order("created_at DESC")
     elsif (current_user)
       @posts = Post.near(current_user.address).order("created_at DESC")
+    elsif params[:tag]
+      @posts = Post.all.tagged_with(params[:tag]).order("created_at DESC")
     else
       @posts = Post.all.order("created_at DESC")
     end            
