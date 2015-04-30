@@ -6,6 +6,7 @@
         = image_tag @post.image.url(:medium)
       .panel-body
         p = simple_format(@post.description)
+        = commontator_thread(@post) 
       .panel-footer
         .row
           .col-md-6

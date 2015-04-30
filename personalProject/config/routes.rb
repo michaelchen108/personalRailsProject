@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
   resources :tag
-  
+  mount Commontator::Engine => '/commontator'
   root "posts#index"
 
 end
