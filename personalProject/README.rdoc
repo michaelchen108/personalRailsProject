@@ -1,36 +1,36 @@
 == README
 
-Title: Free and For Sale
-Team Members: Michael Chen, Nhi Quach, Hubert Tsen, Jason Xie
-Demo Link: 
-Idea: An application like the Berkeley Free and For Sale page. Users can make, edit, and delete postings and comment on other postings
+#Title: Free and For Sale  
+Team Members: Michael Chen, Nhi Quach, Hubert Tsen, Jason Xie  
+Demo Link:   
+Idea: An application like the Berkeley Free and For Sale page. Users can make, edit, and delete postings and comment on other postings  
 
 
-Models and Description:
+###Models and Description 
 
-User
-has name, email, address, and many comments and posts
-can edit and delete their own posts
+#User:  
+has name, email, address, and many comments and posts  
+can edit and delete their own posts  
 
-Post
-has title, description, image, comments thread
-belongs to User, has many comments
+#Post:  
+has title, description, image, comments thread  
+belongs to User, has many comments  
 
-Comment
-has text and belongs to a User and Post
+#Comment:  
+has text and belongs to a User and Post  
+
+ 
+#Features:  
+Users can log in and create posts  
+Users can edit and delete posts  
+Posts are filtered by location and tags  
+Posts include images, title, description, and custom tags  
+Posts include a link to email the post creator  
+Users can comment on posts  
 
 
-Features:
-Users can log in and create posts
-Users can edit and delete posts
-Posts are filtered by location and tags
-Posts include images, title, description, and custom tags
-Posts include a link to email the post creator
-Users can comment on posts
-
-
-Division of Labor:
-Michael: Added geocoding functionality to filter posts
-Nhi: Create Posts and Users/Views
-Hubert: User abilities 
-Jason: Commenting functionality
+#Division of Labor:  
+Michael: Added geocoding functionality to filter posts  
+Nhi: Create Posts and Users/Views  
+Hubert: User abilities     
+Jason: Commenting functionality  
