@@ -1,11 +1,11 @@
 == README
 
-<b>Title:</b>  
+* <b>Title:</b>  
 Free and For Sale        
-<b>Team Members:</b>  
+* <b>Team Members:</b>  
 Michael Chen, Nhi Quach, Hubert Tsen, Jason Xie   
-<b>Demo Link: </b>   
-<b>Idea:</b>
+* <b>Demo Link: </b>   
+* <b>Idea:</b>
 An application like the Berkeley Free and For Sale page. Users can make, edit, and delete postings and comment on other postings 
 
 
