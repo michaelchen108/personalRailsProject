@@ -6,11 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+User.create(:name => 'Superman', :address => 'Berkeley, CA', :email => 'super@man.com', :password => 'password', :password_confirmation => 'password')
+User.create(:name => 'Batman', :address => 'Berkeley, CA', :email => 'bat@man.com', :password => 'password', :password_confirmation => 'password')
+User.create(:name => 'Ironman', :address => 'San Diego, CA', :email => 'iron@man.com', :password => 'password', :password_confirmation => 'password')
+User.create(:name => 'Ash Ketchum', :address => 'San Diego, CA', :email => 'ash@ketchum.com', :password => 'password', :password_confirmation => 'password')
 
-# %w(Billy Bob Joe).each do |name|
-#   User.create name: name, email: name+"@#{name}.com", password: 'password'
-# end
 
-# Post.create(title: "Bicycle", description: "This is an old bicycle that I'm selling for $50.", user_id: User.first)
-# Post.create(title: "Lawn Mower", description: "I need to get rid of this lawnmower, please pick it up!", user_id: User.second);
-# Post.create(title: "TV Monitor", description: "A 36 inch monitor that I don't need anymore, please PM me if you're interested.", user_id: User.third);
+Post.create(title: "Bicycle", :address => 'Berkeley, CA', description: "This is an old bicycle that I'm selling for $50.", user_id: 1)
+Post.create(title: "Lawn Mower", :address => 'Berkeley, CA', description: "I need to get rid of this lawnmower, please pick it up!", user_id: 1);
+Post.create(title: "TV Monitor",  :address => 'Berkeley, CA', description: "A 36 inch monitor that I don't need anymore, please PM me if you're interested.", user_id: 2);
+Post.create(title: "Summer sublet", :address => 'San Diego, CA', description: "Sublet in 2BR 2BA apt! 550 per month, price negotiable", user_id: 3)
