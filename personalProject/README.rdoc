@@ -2,7 +2,7 @@
 
 * <b>Title:</b>  Free & For Sale        
 * <b>Team Members:</b> Michael Chen, Nhi Quach, Hubert Tsen, Jason Xie   
-* <b>Demo Link: </b>   
+* <b>Demo Link: </b> https://powerful-ocean-4315.herokuapp.com/   
 * <b>Idea:</b> An application like the Berkeley Free and For Sale page. Users can make, edit, and delete postings and comment on other postings 
 
 
